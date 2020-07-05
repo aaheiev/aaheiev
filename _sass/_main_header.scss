@@ -1,0 +1,26 @@
+#mainHeader {
+  //padding: 126px 0 100px;
+  padding-top: 10rem;
+  padding-bottom: calc(10rem - #{$navbar-height});
+  background: linear-gradient(
+      to bottom,
+      #{fade-out($brown, 0.2)} 0%,
+      #{fade-out($brown, 0.2)} 100%
+    ),
+    url("/assets/img/bg-masthead.jpg");
+  background-position: top;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: cover;
+
+  a {
+    color: white;
+    &:hover {
+      color: white;
+      text-decoration: underline;
+    }
+    &:visited {
+      color: white;
+    }
+  }
+}

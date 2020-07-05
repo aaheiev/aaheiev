@@ -1,0 +1,20 @@
+{
+  "name": "MyBlog",
+  "version": "0.0.1",
+  "description": "My Personal Notes",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.13.0",
+    "bootstrap": "^4.5.0",
+    "jquery": "^3.5.1",
+    "jquery.easing": "^1.4.1",
+    "magnific-popup": "^1.1.0",
+    "popper.js": "^1.16.1"
+  }
+}
