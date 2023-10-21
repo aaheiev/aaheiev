@@ -1,6 +1,6 @@
-// 
+//
 // Masthead
-// 
+//
 
 header.masthead {
     padding-top: 10rem;
@@ -10,9 +10,9 @@ header.masthead {
     // if the image name change, make sure to update the url path below!
 
     background: linear-gradient(to bottom,
-        #{fade-out($brown, 0.2)} 0%,
-        #{fade-out($brown, 0.2)} 100%),
-    url("../assets/img/bg-masthead.jpg");
+        #{fade-out($navi, 0.2)} 0%,
+        #{fade-out($navi, 0.2)} 100%),
+    url("../assets/img/main1.gif");
 
     background-position: center;
     background-repeat: no-repeat;

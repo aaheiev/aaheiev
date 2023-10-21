@@ -1,6 +1,6 @@
 {
-    "title": "Creative",
-    "name": "startbootstrap-creative",
+    "title": "Andrii's site",
+    "name": "aaheiev",
     "version": "7.0.7",
     "scripts": {
         "build": "npm run clean && npm run build:pug && npm run build:scss && npm run build:scripts && npm run build:assets",
@@ -23,7 +23,7 @@
         "theme",
         "template"
     ],
-    "homepage": "https://startbootstrap.com/theme/creative",
+    "homepage": "https://aaheiev.github.io/",
     "bugs": {
         "url": "https://github.com/StartBootstrap/startbootstrap-creative/issues",
         "email": "feedback@startbootstrap.com"
@@ -31,11 +31,11 @@
     "license": "MIT",
     "author": "Start Bootstrap",
     "contributors": [
-        "David Miller (https://davidmiller.io/)"
+        "Andrii Aheiev (https://github.com/aaheiev)"
     ],
     "repository": {
         "type": "git",
-        "url": "https://github.com/StartBootstrap/startbootstrap-creative.git"
+        "url": "https://github.com/aaheiev/aaheiev.git"
     },
     "dependencies": {
         "bootstrap": "5.2.3"
@@ -45,7 +45,7 @@
         "browser-sync": "2.29.1",
         "chokidar": "3.5.3",
         "concurrently": "6.3.0",
-        "postcss": "8.4.21",
+        "postcss": "^8.4.31",
         "prettier": "2.8.6",
         "pug": "3.0.2",
         "sass": "1.60.0",

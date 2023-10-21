@@ -1,7 +1,7 @@
 /*!
-* Start Bootstrap - Creative v7.0.7 (https://startbootstrap.com/theme/creative)
+* Start Bootstrap - Andrii's site v7.0.7 (https://aaheiev.github.io/)
 * Copyright 2013-2023 Start Bootstrap
-* Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-creative/blob/master/LICENSE)
+* Licensed under MIT (https://github.com/StartBootstrap/aaheiev/blob/master/LICENSE)
 */
 //
 // Scripts
