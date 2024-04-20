@@ -1,14 +1,29 @@
-# Test
+---
+header-includes:
+- \usepackage{multicol}
+- \newcommand{\hideFromPandoc}[1]{#1}
+- \hideFromPandoc{
+\let\Begin\begin
+\let\End\end
+}
 ---
 
-<div class="row">
-    <div class="col-md-8" markdown="1">
-        Some text.
-    </div>
-    <div class="col-md-8" markdown="1">
-        Some text.
-    </div>
-    <div class="col-md-4" markdown="1">
-        <img height="100px" class="center-block" src="./img/IMG_0275.JPG">
-    </div>
-</div>
+# Rule 1
+Description for rule 1.
+
+\Begin{multicols}{2}
+## Good
+```c
+int foo (void)
+{
+int i;
+}
+```
+
+## Bad
+```c
+int foo (void) {
+int i;
+}
+```
+\End{multicols}
