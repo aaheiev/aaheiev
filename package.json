@@ -1,0 +1,24 @@
+{
+  "name": "aaheiev",
+  "type": "module",
+  "version": "0.0.1",
+  "engines": {
+    "node": ">=22.23.4"
+  },
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "astro": "^7.4.4",
+    "bootstrap": "^5.3.8"
+  },
+  "allowScripts": {
+    "fsevents@2.3.3": true
+  },
+  "devDependencies": {
+    "sass": "^1.107.1"
+  }
+}

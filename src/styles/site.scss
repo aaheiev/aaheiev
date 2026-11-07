@@ -1,0 +1,323 @@
+// Site-wide styles — compiled by Astro/Vite and imported in src/layouts/Layout.astro.
+// All component, layout, and page styles are consolidated here.
+
+// ---------------------------------------------------------------------------
+// Bootstrap 5.3 — compiled from source Sass and bundled into dist by Vite.
+// ---------------------------------------------------------------------------
+@use "bootstrap/scss/bootstrap" as bootstrap;
+
+// ---------------------------------------------------------------------------
+// Variables
+// ---------------------------------------------------------------------------
+
+// Colors
+$color-ink: #111827;
+$color-muted: #4b5563;
+$color-link-hover: rgb(78, 80, 86);
+$color-button-text-hover: rgb(230, 230, 230);
+
+// Fonts
+$font-sans: Inter, Roboto, "Helvetica Neue", "Arial Nova", "Nimbus Sans", Arial, sans-serif;
+$font-mono:
+  ui-monospace, "Cascadia Code", "Source Code Pro", Menlo, Consolas, "DejaVu Sans Mono", monospace;
+
+// Radii & spacing
+$radius-sm: 8px;
+$radius-md: 10px;
+$radius-lg: 16px;
+$space: 16px;
+
+// Gradients
+$gradient-button: linear-gradient(83.21deg, #3245ff 0%, #bc52ee 100%);
+$gradient-pre: linear-gradient(14deg, #d83333 0%, #f041ff 100%);
+
+// Breakpoints
+$bp-short: 368px;
+$bp-mobile: 768px;
+
+// ---------------------------------------------------------------------------
+// Mixins
+// ---------------------------------------------------------------------------
+
+// Clip a gradient background to the text it fills.
+@mixin gradient-text($gradient) {
+  background: $gradient;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+// ---------------------------------------------------------------------------
+// Base (from src/layouts/Layout.astro)
+// ---------------------------------------------------------------------------
+
+html,
+body {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+}
+
+// ---------------------------------------------------------------------------
+// Welcome component (from src/components/Welcome.astro)
+// ---------------------------------------------------------------------------
+
+#background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  filter: blur(100px);
+}
+
+#container {
+  font-family: $font-sans;
+  height: 100%;
+
+  @media screen and (max-width: $bp-mobile) {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+main {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+#hero {
+  display: flex;
+  align-items: start;
+  flex-direction: column;
+  justify-content: center;
+  padding: $space;
+
+  @media screen and (max-width: $bp-mobile) {
+    display: block;
+    padding-top: 10%;
+  }
+}
+
+h1 {
+  font-size: 22px;
+  margin-top: 0.25em;
+
+  @media screen and (max-width: $bp-mobile) {
+    line-height: 1.5;
+  }
+}
+
+#links {
+  display: flex;
+  gap: $space;
+
+  a {
+    display: flex;
+    align-items: center;
+    padding: 10px 12px;
+    color: $color-ink;
+    text-decoration: none;
+    transition: color 0.2s;
+
+    &:hover {
+      color: $color-link-hover;
+    }
+
+    svg {
+      height: 1em;
+      margin-left: 8px;
+    }
+
+    &.button {
+      color: white;
+      background: $gradient-button;
+      box-shadow:
+        inset 0 0 0 1px rgba(255, 255, 255, 0.12),
+        inset 0 -2px 0 rgba(0, 0, 0, 0.24);
+      border-radius: $radius-md;
+
+      &:hover {
+        color: $color-button-text-hover;
+        box-shadow: none;
+      }
+    }
+  }
+
+  @media screen and (max-width: $bp-mobile) {
+    flex-wrap: wrap;
+
+    a.button {
+      padding: 14px 18px;
+    }
+  }
+}
+
+pre {
+  font-family: $font-mono;
+  font-weight: normal;
+  margin: 0;
+
+  @include gradient-text($gradient-pre);
+}
+
+h2 {
+  margin: 0 0 1em;
+  font-weight: normal;
+  color: $color-ink;
+  font-size: 20px;
+}
+
+p {
+  color: $color-muted;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.006em;
+  margin: 0;
+}
+
+code {
+  display: inline-block;
+  background:
+    linear-gradient(66.77deg, #f3cddd 0%, #f5cee7 100%) padding-box,
+    linear-gradient(155deg, #d83333 0%, #f041ff 18%, #f5cee7 45%) border-box;
+  border-radius: $radius-sm;
+  border: 1px solid transparent;
+  padding: 6px 8px;
+}
+
+.box {
+  padding: $space;
+  background: rgba(255, 255, 255, 1);
+  border-radius: $radius-lg;
+  border: 1px solid white;
+}
+
+#news {
+  position: absolute;
+  bottom: $space;
+  right: $space;
+  max-width: 300px;
+  text-decoration: none;
+  transition: background 0.2s;
+  backdrop-filter: blur(50px);
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.55);
+  }
+
+  @media screen and (max-height: $bp-short) {
+    display: none;
+  }
+
+  @media screen and (max-width: $bp-mobile) {
+    right: $space;
+    left: $space;
+    bottom: 2.5rem;
+    max-width: 100%;
+  }
+}
+
+// ---------------------------------------------------------------------------
+// Heroes example helpers
+// (from bootstrap-5.3.8-examples/heroes: inline <style> + heroes.css)
+// ---------------------------------------------------------------------------
+
+// Theme / breakpoint tokens for the heroes helpers
+$bd-violet-bg: #712cf9;
+$bd-violet-rgb: 112.520718, 44.062154, 249.437846;
+$bd-violet-hover: #6528e0;
+$bd-violet-active: #5a23c8;
+$bp-lg: 992px;
+
+.bd-placeholder-img {
+  font-size: 1.125rem;
+  text-anchor: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+
+  @media (min-width: $bp-mobile) {
+    &-lg {
+      font-size: 3.5rem;
+    }
+  }
+}
+
+.b-example-divider {
+  width: 100%;
+  height: 3rem;
+  background-color: rgba(0, 0, 0, 0.1);
+  border: solid rgba(0, 0, 0, 0.15);
+  border-width: 1px 0;
+  box-shadow:
+    inset 0 0.5em 1.5em rgba(0, 0, 0, 0.1),
+    inset 0 0.125em 0.5em rgba(0, 0, 0, 0.15);
+}
+
+.b-example-vr {
+  flex-shrink: 0;
+  width: 1.5rem;
+  height: 100vh;
+}
+
+.bi {
+  vertical-align: -0.125em;
+  fill: currentColor;
+}
+
+.nav-scroller {
+  position: relative;
+  z-index: 2;
+  height: 2.75rem;
+  overflow-y: hidden;
+
+  .nav {
+    display: flex;
+    flex-wrap: nowrap;
+    padding-bottom: 1rem;
+    margin-top: -1px;
+    overflow-x: auto;
+    text-align: center;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+.btn-bd-primary {
+  --bd-violet-bg: #{$bd-violet-bg};
+  --bd-violet-rgb: #{$bd-violet-rgb};
+  --bs-btn-font-weight: 600;
+  --bs-btn-color: var(--bs-white);
+  --bs-btn-bg: var(--bd-violet-bg);
+  --bs-btn-border-color: var(--bd-violet-bg);
+  --bs-btn-hover-color: var(--bs-white);
+  --bs-btn-hover-bg: #{$bd-violet-hover};
+  --bs-btn-hover-border-color: #{$bd-violet-hover};
+  --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
+  --bs-btn-active-color: var(--bs-btn-hover-color);
+  --bs-btn-active-bg: #{$bd-violet-active};
+  --bs-btn-active-border-color: #{$bd-violet-active};
+}
+
+.bd-mode-toggle {
+  z-index: 1500;
+
+  .bi {
+    width: 1em;
+    height: 1em;
+  }
+
+  .dropdown-menu .active .bi {
+    display: block !important;
+  }
+}
+
+// From heroes.css
+@media (min-width: $bp-lg) {
+  .rounded-lg-3 {
+    border-radius: 0.3rem;
+  }
+}

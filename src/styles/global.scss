@@ -1,0 +1,43 @@
+// Global SCSS — compiled automatically by Astro/Vite in dev and build.
+// Edit this file and the dev server will hot-reload the styles.
+
+// Variables
+$color-bg: #0d1117;
+$color-text: #e6edf3;
+$color-accent: #4f9cf9;
+$max-width: 70rem;
+
+// Mixins
+@mixin container {
+  width: 100%;
+  max-width: $max-width;
+  margin-inline: auto;
+  padding-inline: 1.5rem;
+}
+
+:root {
+  color-scheme: dark;
+}
+
+html,
+body {
+  margin: 0;
+  width: 100%;
+  min-height: 100%;
+  background-color: $color-bg;
+  color: $color-text;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+.container {
+  @include container;
+}
+
+a {
+  color: $color-accent;
+
+  // Nesting
+  &:hover {
+    text-decoration: underline;
+  }
+}
