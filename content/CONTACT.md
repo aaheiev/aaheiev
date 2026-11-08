@@ -1,5 +1,6 @@
 # Contact
 
-- 📧 [Email](mailto:a.ageyev+site@gmail.com)
-- 🐙 [GitHub](https://github.com/aaheiev)
-- 💼 [LinkedIn](https://www.linkedin.com/in/aaheiev)
+- [Email](mailto:andrii.aheiev+site@outlook.com)
+- [GitHub](https://github.com/aaheiev)
+- [LinkedIn](https://www.linkedin.com/in/aaheiev)
+- [Facebook](https://www.facebook.com/andrii.ageiev)

@@ -1,7 +1,7 @@
 # Principal / Platform Engineer | Cloud Infrastructure | DevOps & SRE | DevSecOps | FinTech
 
 I've been building and running infrastructure since 2002. What started as a Support Engineer role 
-at a small ISP in Odesa, Ukraine, while studying at Odesa State Polytechnic University, gradually 
+at a small ISP, while studying at Odesa State Polytechnic University, gradually 
 evolved into a career spanning infrastructure, cloud engineering, DevOps, SRE, platform engineering, 
 and security.
 

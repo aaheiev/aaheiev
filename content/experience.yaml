@@ -1,0 +1,232 @@
+---
+projects:
+- 2026-04:
+    company: EuroCTP
+    title: Principal Systems Engineer / Lead DevOps
+    url: https://euroctp.eu
+    period: 2026-04-01 - now
+    location: Amsterdam, The Netherlands
+    description: |
+      EuroCTP is a European conference focused on the latest advancements in computational and theoretical physics. It brings together researchers, academics, and industry professionals to discuss cutting-edge research, share insights, and foster collaborations in the field of physics.
+    key_technologies:
+      - AWS
+      - AWS Direct Connections
+      - On-Premise
+      - Low-latency trading networking
+      - EKS
+      - Kubernetes
+      - Podman
+      - Containers
+      - Terraform
+      - IaC
+      - GitHub Actions
+      - CI / CD
+      - DevSecOps
+      - ArgoCD
+      - GitOps
+      - Helm
+      - Consul
+      - RedHat Enterprise Linux
+      - Linux
+      - Ansible
+      - Automation
+      - DataDog
+      - Teleport
+      - PAM (Privileged Access Management)
+      - Azure EntraID
+      - Keycloak
+      - Azure Sentinel
+      - SEM
+      - Vulnerability Management
+      - GitOps
+      - FinOps
+      - Disaster Recovery
+      - ServiceNow CMDB
+- 2023:
+    company: BackBase (GrandCentral)
+    title: Principal Systems / Platform Engineer
+    url: https://www.backbase.com/grandcentral
+    period: 2023-01-01 - 2026-03-31
+    location: Amsterdam, The Netherlands
+    description: |
+      Design, build and run integration API platform for multi-tenant / multi-environment banking.
+      Automate infrastructure and processes.
+      Prepare infrastructure for SOC2 certification. Hire and lead the team of 5 engineers.
+      - Designed and implemented azure multi-tenant multi-environment infrastructure as code with terraform and GitHub workflows.
+      - Implemented GitOps for Kubernetes workload management using ArgoCD
+      - Implemented Development environment for low code platform based on Knative and Camel-K
+      - Implemented observability, security monitoring SOC controls and incident management.
+    key_technologies:
+      - Azure
+      - AKS
+      - Azure APIm
+      - Integration Platform
+      - Azure EntraID
+      - PIM (Privileged Identity Management)
+      - DataBricks
+      - GitHub Actions
+      - Terraform
+      - IaC
+      - CI / CD
+      - DevSecOps
+      - Helm
+      - ArgoCD
+      - GitOps
+      - Istio
+      - Knative
+      - Camel-K
+      - Low Code Platform
+      - Azure Service Operator
+      - Python
+      - Containers
+      - Container Security
+      - Kubernetes
+      - Kubernetes Security
+      - Observability
+      - DataDog
+      - Disaster Recovery
+      - Automation
+      - SOC2 compliance
+- 2021-07:
+    company: BUX
+    title: Senior DevOps Engineer
+    url: https://getbux.com
+    period: 2021-07-01 - 2023-06-30
+    location: Amsterdam, The Netherlands
+    description: |
+      Managing Google Cloud Infrastructure and CI/CD processes.
+      - Migrated infrastructure as code from shell scripts to Terraform managed by GitHub Actions.
+      - Unified and migrated CI/CD from Jenkins and TeamCity to GitHub Actions.
+    key_technologies:
+      - Google Cloud
+      - FluxCD
+      - GitOps
+      - Kubernetes
+      - GKE
+      - Automation
+      - Terraform
+      - Helm
+      - GitHub Actions
+      - Docker
+      - Containers
+      - CI / CD
+      - Kafka
+      - RabbitMQ
+      - Istio
+      - Elasticsearch
+- 2021-01:
+    company: ABN AMRO (contract via Infosys)
+    title: Senior IT Engineer
+    url: https://www.abnamro.nl
+    period: 2021-01-01 - 2021-06-30
+    location: Amsterdam, The Netherlands
+    description: |
+      Created Ansible / Azure DevOps workflows as Configuration as Code and migrated 
+      the Murex application stack from on-premise data center to Azure Cloud.
+    key_technologies:
+      - Azure
+      - Ansible
+      - Automation
+      - Murex
+      - Oracle
+      - RedHat Enterprise Linux
+      - Azure DevOps
+      - PowerShell
+      - NetApp Volumes
+- 2020-02:
+    company: ING (XLinQ, contract via Levy Professionals)
+    title: Site Reliability Engineer
+    urls:
+      - http://ing.nl
+      - https://www.xlinq.io
+    period: 2020-02-01 - 2020-12-31
+    location: Amsterdam, The Netherlands
+    description: |
+      Infrastructure development, CI/CD, application security and process automation.
+      - Azure Cloud infrastructure design and automation.
+      - Microservices design and full lifecycle implementation (build, test, Kubernetes deploy).
+      - Azure DevOps CI/CD.
+      - Implemented infrastructure/application monitoring with Azure Monitoring and Log Analytics.
+      - Security monitoring. Implementation of CISO and SEM rules with Azure Sentinel.
+    key_technologies:
+      - Azure
+      - Azure Monitoring
+      - AKS
+      - Azure DevOps
+      - Azure Sentinel
+      - Docker
+      - Containers
+      - CI / CD
+      - Kubernetes
+      - Container Security
+      - Automation
+      - SEM
+      - IaC
+      - PowerShell
+      - Aqua Security Monitoring
+      - Application Security
+- 2018-06:
+    company: PitneyBowes
+    title: Senior DevOps Engineer
+    url: https://www.pitneybowes.com
+    period: 2018-06-01 - 2020-01-31
+    location: TX, USA, Remote
+    description: |
+      - Migrated a complex .NET event-processing application from Linux VM's to containers and Kubernetes.
+      and created a set of microservices.
+      - Implemented events synchronization from Kafka to AWS Kinesis.
+      - Migrated infrastructure from Azure to AWS (development and CI/CD).
+      - ML prediction app pipelines and model deployment.
+    key_technologies:
+      - CI / CD
+      - Docker
+      - Containers
+      - Kubernetes
+      - Helm
+      - Jenkins
+      - Kafka
+      - Azure
+      - Azure DevOps
+      - AKS
+      - AWS
+      - Linux
+      - PowerShell
+      - TeamCity
+      - Automation
+      - ML Workflows
+      - Airflow
+      - H2O
+      - MS SQL Server
+      - .Net Core
+- 2010-05:
+    company: Various projects (Contractor / Freelancer)
+    title: DevOps Engineer
+    period: 2010-05-01 - 2018-05-31
+    location: Remote
+    description: |
+      Designed, implemented and supported private and public cloud infrastructure for 
+      various web applications.
+    key_technologies:
+      - Puppet
+      - VMware
+      - Private Cloud
+      - On-Premise
+      - AWS
+      - DigitalOcean
+      - Hetzner
+      - Linode
+      - Ansible
+      - Automation
+      - Docker
+      - Oracle
+      - RedHat Enterprise Linux
+      - Linux
+      - MySQL
+      - PostgreSQL
+      - MongoDB
+      - MS SQL Server
+      - WEB
+      - FinOps
+      - DNS domain management
+      - PCI DSS compliance
+      - Disaster Recovery

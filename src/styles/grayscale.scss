@@ -1,0 +1,27 @@
+//
+// Grayscale theme
+//
+// Ported from startbootstrap-grayscale. Variable overrides are declared first,
+// then Bootstrap is imported from source so the theme color map and typography
+// take effect, followed by the theme's global, component, and section styles.
+
+// Theme variable overrides (must come before Bootstrap)
+@import "./variables.scss";
+
+// Bootstrap (compiled from source Sass, bundled by Vite)
+@import "bootstrap/scss/bootstrap.scss";
+
+// Global theme CSS
+@import "./global.scss";
+
+// Components
+@import "./components/navbar.scss";
+@import "./components/buttons.scss";
+
+// Sections
+@import "./sections/masthead.scss";
+@import "./sections/about.scss";
+@import "./sections/techskills.scss";
+@import "./sections/message-me.scss";
+@import "./sections/contact.scss";
+@import "./sections/footer.scss";
