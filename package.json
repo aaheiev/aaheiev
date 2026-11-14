@@ -9,7 +9,9 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "test": "vitest run",
+    "test:watch": "vitest"
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^7.3.1",
@@ -20,6 +22,9 @@
     "fsevents@2.3.3": true
   },
   "devDependencies": {
-    "sass": "^1.107.1"
+    "fast-check": "^4.10.2",
+    "happy-dom": "^21.0.4",
+    "sass": "^1.107.1",
+    "vitest": "^5.1.0"
   }
 }

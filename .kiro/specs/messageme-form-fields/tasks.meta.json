@@ -1,0 +1,384 @@
+{
+  "pbtResults": {
+    "2.5 Write property test for message length validation": {
+      "status": "passed",
+      "lastRunTimestamp": 1794175704116
+    },
+    "2.4 Write property test for email validation": {
+      "status": "passed",
+      "lastRunTimestamp": 1794175719602
+    },
+    "2.3 Write property test for name validation": {
+      "status": "passed",
+      "lastRunTimestamp": 1794175737421
+    },
+    "2.6 Write property test for honeypot gating": {
+      "status": "passed",
+      "lastRunTimestamp": 1794175790389
+    },
+    "2.7 Write property test for submit outcome and value retention": {
+      "status": "passed",
+      "lastRunTimestamp": 1794175801115
+    }
+  },
+  "executionHistory": {
+    "1. Set up test tooling": [
+      {
+        "executionId": "1be06111-bd56-4837-a193-64b0062297c8",
+        "chatSessionId": "sess_be89d5cf-9516-463c-9496-e46d534bb2c3",
+        "timestamp": 1794174903473
+      },
+      {
+        "executionId": "1be06111-bd56-4837-a193-64b0062297c8",
+        "chatSessionId": "sess_be89d5cf-9516-463c-9496-e46d534bb2c3",
+        "timestamp": 1794174915261
+      },
+      {
+        "executionId": "1be06111-bd56-4837-a193-64b0062297c8",
+        "chatSessionId": "sess_be89d5cf-9516-463c-9496-e46d534bb2c3",
+        "timestamp": 1794175006695
+      }
+    ],
+    "2.1 Create `src/scripts/messageme-validation.ts` with the pure field validators": [
+      {
+        "executionId": "1be06111-bd56-4837-a193-64b0062297c8",
+        "chatSessionId": "sess_be89d5cf-9516-463c-9496-e46d534bb2c3",
+        "timestamp": 1794174903504
+      },
+      {
+        "executionId": "1be06111-bd56-4837-a193-64b0062297c8",
+        "chatSessionId": "sess_be89d5cf-9516-463c-9496-e46d534bb2c3",
+        "timestamp": 1794175009660
+      },
+      {
+        "executionId": "1be06111-bd56-4837-a193-64b0062297c8",
+        "chatSessionId": "sess_be89d5cf-9516-463c-9496-e46d534bb2c3",
+        "timestamp": 1794175087727
+      }
+    ],
+    "2.2 Implement the submit-outcome computation function": [
+      {
+        "executionId": "1be06111-bd56-4837-a193-64b0062297c8",
+        "chatSessionId": "sess_be89d5cf-9516-463c-9496-e46d534bb2c3",
+        "timestamp": 1794174903528
+      },
+      {
+        "executionId": "1be06111-bd56-4837-a193-64b0062297c8",
+        "chatSessionId": "sess_be89d5cf-9516-463c-9496-e46d534bb2c3",
+        "timestamp": 1794175091575
+      },
+      {
+        "executionId": "1be06111-bd56-4837-a193-64b0062297c8",
+        "chatSessionId": "sess_be89d5cf-9516-463c-9496-e46d534bb2c3",
+        "timestamp": 1794175156200
+      }
+    ],
+    "3. Checkpoint - validators and property tests": [
+      {
+        "executionId": "1be06111-bd56-4837-a193-64b0062297c8",
+        "chatSessionId": "sess_be89d5cf-9516-463c-9496-e46d534bb2c3",
+        "timestamp": 1794174903553
+      },
+      {
+        "executionId": "1be06111-bd56-4837-a193-64b0062297c8",
+        "chatSessionId": "sess_be89d5cf-9516-463c-9496-e46d534bb2c3",
+        "timestamp": 1794175382126
+      },
+      {
+        "executionId": "1be06111-bd56-4837-a193-64b0062297c8",
+        "chatSessionId": "sess_be89d5cf-9516-463c-9496-e46d534bb2c3",
+        "timestamp": 1794175414750
+      }
+    ],
+    "4.1 Add the Name field and its feedback": [
+      {
+        "executionId": "1be06111-bd56-4837-a193-64b0062297c8",
+        "chatSessionId": "sess_be89d5cf-9516-463c-9496-e46d534bb2c3",
+        "timestamp": 1794174903577
+      },
+      {
+        "executionId": "1be06111-bd56-4837-a193-64b0062297c8",
+        "chatSessionId": "sess_be89d5cf-9516-463c-9496-e46d534bb2c3",
+        "timestamp": 1794175092517
+      },
+      {
+        "executionId": "1be06111-bd56-4837-a193-64b0062297c8",
+        "chatSessionId": "sess_be89d5cf-9516-463c-9496-e46d534bb2c3",
+        "timestamp": 1794175156658
+      }
+    ],
+    "4.2 Add the Message textarea and its feedback": [
+      {
+        "executionId": "1be06111-bd56-4837-a193-64b0062297c8",
+        "chatSessionId": "sess_be89d5cf-9516-463c-9496-e46d534bb2c3",
+        "timestamp": 1794174903603
+      },
+      {
+        "executionId": "1be06111-bd56-4837-a193-64b0062297c8",
+        "chatSessionId": "sess_be89d5cf-9516-463c-9496-e46d534bb2c3",
+        "timestamp": 1794175163522
+      },
+      {
+        "executionId": "1be06111-bd56-4837-a193-64b0062297c8",
+        "chatSessionId": "sess_be89d5cf-9516-463c-9496-e46d534bb2c3",
+        "timestamp": 1794175195050
+      }
+    ],
+    "4.3 Add the honeypot field and preserve the email field and submit button": [
+      {
+        "executionId": "1be06111-bd56-4837-a193-64b0062297c8",
+        "chatSessionId": "sess_be89d5cf-9516-463c-9496-e46d534bb2c3",
+        "timestamp": 1794174903627
+      },
+      {
+        "executionId": "1be06111-bd56-4837-a193-64b0062297c8",
+        "chatSessionId": "sess_be89d5cf-9516-463c-9496-e46d534bb2c3",
+        "timestamp": 1794175197488
+      },
+      {
+        "executionId": "1be06111-bd56-4837-a193-64b0062297c8",
+        "chatSessionId": "sess_be89d5cf-9516-463c-9496-e46d534bb2c3",
+        "timestamp": 1794175233979
+      }
+    ],
+    "5.1 Add the component `<script>` block importing the validators and running submit logic": [
+      {
+        "executionId": "1be06111-bd56-4837-a193-64b0062297c8",
+        "chatSessionId": "sess_be89d5cf-9516-463c-9496-e46d534bb2c3",
+        "timestamp": 1794174903654
+      },
+      {
+        "executionId": "1be06111-bd56-4837-a193-64b0062297c8",
+        "chatSessionId": "sess_be89d5cf-9516-463c-9496-e46d534bb2c3",
+        "timestamp": 1794175236525
+      },
+      {
+        "executionId": "1be06111-bd56-4837-a193-64b0062297c8",
+        "chatSessionId": "sess_be89d5cf-9516-463c-9496-e46d534bb2c3",
+        "timestamp": 1794175339776
+      }
+    ],
+    "5.2 Wire input-event feedback clearing": [
+      {
+        "executionId": "1be06111-bd56-4837-a193-64b0062297c8",
+        "chatSessionId": "sess_be89d5cf-9516-463c-9496-e46d534bb2c3",
+        "timestamp": 1794174903678
+      },
+      {
+        "executionId": "1be06111-bd56-4837-a193-64b0062297c8",
+        "chatSessionId": "sess_be89d5cf-9516-463c-9496-e46d534bb2c3",
+        "timestamp": 1794175342181
+      },
+      {
+        "executionId": "1be06111-bd56-4837-a193-64b0062297c8",
+        "chatSessionId": "sess_be89d5cf-9516-463c-9496-e46d534bb2c3",
+        "timestamp": 1794175375841
+      }
+    ],
+    "6.1 Extend input styling to textarea and hide the honeypot": [
+      {
+        "executionId": "1be06111-bd56-4837-a193-64b0062297c8",
+        "chatSessionId": "sess_be89d5cf-9516-463c-9496-e46d534bb2c3",
+        "timestamp": 1794174903703
+      },
+      {
+        "executionId": "1be06111-bd56-4837-a193-64b0062297c8",
+        "chatSessionId": "sess_be89d5cf-9516-463c-9496-e46d534bb2c3",
+        "timestamp": 1794175010587
+      },
+      {
+        "executionId": "1be06111-bd56-4837-a193-64b0062297c8",
+        "chatSessionId": "sess_be89d5cf-9516-463c-9496-e46d534bb2c3",
+        "timestamp": 1794175088562
+      }
+    ],
+    "7. Checkpoint - markup, behavior, and styling": [
+      {
+        "executionId": "1be06111-bd56-4837-a193-64b0062297c8",
+        "chatSessionId": "sess_be89d5cf-9516-463c-9496-e46d534bb2c3",
+        "timestamp": 1794174903728
+      },
+      {
+        "executionId": "1be06111-bd56-4837-a193-64b0062297c8",
+        "chatSessionId": "sess_be89d5cf-9516-463c-9496-e46d534bb2c3",
+        "timestamp": 1794175417320
+      },
+      {
+        "executionId": "1be06111-bd56-4837-a193-64b0062297c8",
+        "chatSessionId": "sess_be89d5cf-9516-463c-9496-e46d534bb2c3",
+        "timestamp": 1794175477058
+      }
+    ],
+    "9. Final checkpoint - full suite": [
+      {
+        "executionId": "1be06111-bd56-4837-a193-64b0062297c8",
+        "chatSessionId": "sess_be89d5cf-9516-463c-9496-e46d534bb2c3",
+        "timestamp": 1794174903753
+      },
+      {
+        "executionId": "1be06111-bd56-4837-a193-64b0062297c8",
+        "chatSessionId": "sess_be89d5cf-9516-463c-9496-e46d534bb2c3",
+        "timestamp": 1794175479787
+      },
+      {
+        "executionId": "1be06111-bd56-4837-a193-64b0062297c8",
+        "chatSessionId": "sess_be89d5cf-9516-463c-9496-e46d534bb2c3",
+        "timestamp": 1794175507995
+      }
+    ],
+    "6. Apply SCSS styling in `_message-me.scss`": [
+      {
+        "executionId": "1be06111-bd56-4837-a193-64b0062297c8",
+        "chatSessionId": "sess_be89d5cf-9516-463c-9496-e46d534bb2c3",
+        "timestamp": 1794175088584
+      }
+    ],
+    "2. Implement the pure validation module": [
+      {
+        "executionId": "1be06111-bd56-4837-a193-64b0062297c8",
+        "chatSessionId": "sess_be89d5cf-9516-463c-9496-e46d534bb2c3",
+        "timestamp": 1794175156226
+      }
+    ],
+    "4. Add the new form markup in `MessageMe.astro`": [
+      {
+        "executionId": "1be06111-bd56-4837-a193-64b0062297c8",
+        "chatSessionId": "sess_be89d5cf-9516-463c-9496-e46d534bb2c3",
+        "timestamp": 1794175234003
+      }
+    ],
+    "5. Wire the client-side submit handler in `MessageMe.astro`": [
+      {
+        "executionId": "1be06111-bd56-4837-a193-64b0062297c8",
+        "chatSessionId": "sess_be89d5cf-9516-463c-9496-e46d534bb2c3",
+        "timestamp": 1794175375868
+      }
+    ],
+    "2.3 Write property test for name validation": [
+      {
+        "executionId": "ffdc525c-7c2c-403e-8c32-6e115e4ee89d",
+        "chatSessionId": "sess_56332d7a-84c5-40b4-b53c-817cf9bf568f",
+        "timestamp": 1794175654888
+      },
+      {
+        "executionId": "ffdc525c-7c2c-403e-8c32-6e115e4ee89d",
+        "chatSessionId": "sess_56332d7a-84c5-40b4-b53c-817cf9bf568f",
+        "timestamp": 1794175659804
+      },
+      {
+        "executionId": "ffdc525c-7c2c-403e-8c32-6e115e4ee89d",
+        "chatSessionId": "sess_56332d7a-84c5-40b4-b53c-817cf9bf568f",
+        "timestamp": 1794175747232
+      }
+    ],
+    "2.4 Write property test for email validation": [
+      {
+        "executionId": "ffdc525c-7c2c-403e-8c32-6e115e4ee89d",
+        "chatSessionId": "sess_56332d7a-84c5-40b4-b53c-817cf9bf568f",
+        "timestamp": 1794175654931
+      },
+      {
+        "executionId": "ffdc525c-7c2c-403e-8c32-6e115e4ee89d",
+        "chatSessionId": "sess_56332d7a-84c5-40b4-b53c-817cf9bf568f",
+        "timestamp": 1794175660714
+      },
+      {
+        "executionId": "ffdc525c-7c2c-403e-8c32-6e115e4ee89d",
+        "chatSessionId": "sess_56332d7a-84c5-40b4-b53c-817cf9bf568f",
+        "timestamp": 1794175748632
+      }
+    ],
+    "2.5 Write property test for message length validation": [
+      {
+        "executionId": "ffdc525c-7c2c-403e-8c32-6e115e4ee89d",
+        "chatSessionId": "sess_56332d7a-84c5-40b4-b53c-817cf9bf568f",
+        "timestamp": 1794175654957
+      },
+      {
+        "executionId": "ffdc525c-7c2c-403e-8c32-6e115e4ee89d",
+        "chatSessionId": "sess_56332d7a-84c5-40b4-b53c-817cf9bf568f",
+        "timestamp": 1794175661586
+      },
+      {
+        "executionId": "ffdc525c-7c2c-403e-8c32-6e115e4ee89d",
+        "chatSessionId": "sess_56332d7a-84c5-40b4-b53c-817cf9bf568f",
+        "timestamp": 1794175749246
+      }
+    ],
+    "2.6 Write property test for honeypot gating": [
+      {
+        "executionId": "ffdc525c-7c2c-403e-8c32-6e115e4ee89d",
+        "chatSessionId": "sess_56332d7a-84c5-40b4-b53c-817cf9bf568f",
+        "timestamp": 1794175654982
+      },
+      {
+        "executionId": "ffdc525c-7c2c-403e-8c32-6e115e4ee89d",
+        "chatSessionId": "sess_56332d7a-84c5-40b4-b53c-817cf9bf568f",
+        "timestamp": 1794175755703
+      },
+      {
+        "executionId": "ffdc525c-7c2c-403e-8c32-6e115e4ee89d",
+        "chatSessionId": "sess_56332d7a-84c5-40b4-b53c-817cf9bf568f",
+        "timestamp": 1794175812428
+      }
+    ],
+    "2.7 Write property test for submit outcome and value retention": [
+      {
+        "executionId": "ffdc525c-7c2c-403e-8c32-6e115e4ee89d",
+        "chatSessionId": "sess_56332d7a-84c5-40b4-b53c-817cf9bf568f",
+        "timestamp": 1794175655010
+      },
+      {
+        "executionId": "ffdc525c-7c2c-403e-8c32-6e115e4ee89d",
+        "chatSessionId": "sess_56332d7a-84c5-40b4-b53c-817cf9bf568f",
+        "timestamp": 1794175756585
+      },
+      {
+        "executionId": "ffdc525c-7c2c-403e-8c32-6e115e4ee89d",
+        "chatSessionId": "sess_56332d7a-84c5-40b4-b53c-817cf9bf568f",
+        "timestamp": 1794175813153
+      }
+    ],
+    "8.1 Write rendering/attribute example tests": [
+      {
+        "executionId": "ffdc525c-7c2c-403e-8c32-6e115e4ee89d",
+        "chatSessionId": "sess_56332d7a-84c5-40b4-b53c-817cf9bf568f",
+        "timestamp": 1794175655038
+      },
+      {
+        "executionId": "ffdc525c-7c2c-403e-8c32-6e115e4ee89d",
+        "chatSessionId": "sess_56332d7a-84c5-40b4-b53c-817cf9bf568f",
+        "timestamp": 1794175817696
+      },
+      {
+        "executionId": "ffdc525c-7c2c-403e-8c32-6e115e4ee89d",
+        "chatSessionId": "sess_56332d7a-84c5-40b4-b53c-817cf9bf568f",
+        "timestamp": 1794176767040
+      }
+    ],
+    "8.2 Write network-behavior integration tests": [
+      {
+        "executionId": "ffdc525c-7c2c-403e-8c32-6e115e4ee89d",
+        "chatSessionId": "sess_56332d7a-84c5-40b4-b53c-817cf9bf568f",
+        "timestamp": 1794175655062
+      },
+      {
+        "executionId": "ffdc525c-7c2c-403e-8c32-6e115e4ee89d",
+        "chatSessionId": "sess_56332d7a-84c5-40b4-b53c-817cf9bf568f",
+        "timestamp": 1794176886455
+      },
+      {
+        "executionId": "ffdc525c-7c2c-403e-8c32-6e115e4ee89d",
+        "chatSessionId": "sess_56332d7a-84c5-40b4-b53c-817cf9bf568f",
+        "timestamp": 1794176971057
+      }
+    ],
+    "8. Add rendering and network integration tests": [
+      {
+        "executionId": "ffdc525c-7c2c-403e-8c32-6e115e4ee89d",
+        "chatSessionId": "sess_56332d7a-84c5-40b4-b53c-817cf9bf568f",
+        "timestamp": 1794176971081
+      }
+    ]
+  }
+}
