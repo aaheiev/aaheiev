@@ -1,0 +1,17 @@
+//
+// About
+//
+
+.about-section {
+  padding-top: 10rem;
+  background: linear-gradient(
+    to bottom,
+    $black 0%,
+    #{rgba($black, 0.9)} 75%,
+    #{rgba($black, 0.8)} 100%
+  );
+
+  p {
+    margin-bottom: 5rem;
+  }
+}

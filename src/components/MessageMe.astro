@@ -1,0 +1,236 @@
+---
+// Signup / newsletter section for the Grayscale theme.
+// Pre-integrated with SB Forms. To make this form functional, sign up at
+// https://startbootstrap.com/solution/contact-forms to get an API token.
+---
+
+<section id="signup" class="signup-section">
+  <div class="container px-4 px-lg-5">
+    <div class="row gx-4 gx-lg-5">
+      <div class="col-md-10 col-lg-8 mx-auto text-center">
+        <i class="far fa-paper-plane fa-2x mb-2 text-white"></i>
+        <h2 class="text-white mb-5">Send me a message</h2>
+
+        <form id="contactForm" class="form-signup" data-sb-form-api-token="API_TOKEN">
+          <!-- Name input -->
+          <div class="row mb-2">
+            <div class="col">
+              <input
+                id="name"
+                name="name"
+                class="form-control"
+                type="text"
+                maxlength="100"
+                placeholder="Enter your name..."
+                aria-label="Enter your name..."
+                data-sb-validations="required"
+              />
+            </div>
+          </div>
+          <div class="invalid-feedback" data-sb-feedback="name:required">
+            A name is required.
+          </div>
+
+          <!-- Email address input -->
+          <div class="row input-group-newsletter">
+            <div class="col">
+              <input
+                id="emailAddress"
+                class="form-control"
+                type="email"
+                placeholder="Enter email address..."
+                aria-label="Enter email address..."
+                data-sb-validations="required,email"
+              />
+            </div>
+          </div>
+          <div class="invalid-feedback mt-2" data-sb-feedback="emailAddress:required">
+            An email is required.
+          </div>
+          <div class="invalid-feedback mt-2" data-sb-feedback="emailAddress:email">
+            Email is not valid.
+          </div>
+
+          <!-- Message input -->
+          <div class="row mt-2">
+            <div class="col">
+              <textarea
+                id="message"
+                name="message"
+                class="form-control"
+                rows="4"
+                maxlength="2000"
+                placeholder="Enter your message..."
+                aria-label="Enter your message..."
+                data-sb-validations="required"></textarea>
+            </div>
+          </div>
+          <div class="invalid-feedback" data-sb-feedback="message:required">
+            A message is required.
+          </div>
+          <div class="invalid-feedback" data-sb-feedback="message:maxlength">
+            Message must be 2000 characters or fewer.
+          </div>
+
+          <!-- Submit button -->
+          <div class="row mt-3">
+            <div class="col">
+              <button id="submitButton" class="btn btn-primary w-100" type="submit">
+                Send
+              </button>
+            </div>
+          </div>
+
+          <!-- Antibot: honeypot (visually hidden) -->
+          <div class="honeypot-field" aria-hidden="true">
+            <label for="contactCompany">Company (leave blank)</label>
+            <input
+              id="contactCompany"
+              name="contactCompany"
+              type="text"
+              tabindex="-1"
+              autocomplete="off"
+            />
+          </div>
+
+          <!-- Submit success message -->
+          <div id="submitSuccessMessage" class="d-none">
+            <div class="text-center mb-3 mt-2 text-white">
+              <div class="fw-bolder">Form submission successful!</div>
+              To activate this form, sign up at
+              <br />
+              <a href="https://startbootstrap.com/solution/contact-forms">
+                https://startbootstrap.com/solution/contact-forms
+              </a>
+            </div>
+          </div>
+
+          <!-- Submit error message -->
+          <div id="submitErrorMessage" class="d-none">
+            <div class="text-center text-danger mb-3 mt-2">Error sending message!</div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  import {
+    computeSubmitOutcome,
+    validateName,
+    validateEmail,
+    validateMessage,
+    type FieldKey,
+  } from '../scripts/messageme-validation';
+
+  // Element handles. Null-check each and bail out if the form or any required
+  // field is missing so a markup change can never throw at runtime.
+  const form = document.getElementById('contactForm') as HTMLFormElement | null;
+  const honeypot = document.getElementById('contactCompany') as HTMLInputElement | null;
+  const nameEl = document.getElementById('name') as HTMLInputElement | null;
+  const emailEl = document.getElementById('emailAddress') as HTMLInputElement | null;
+  const messageEl = document.getElementById('message') as HTMLTextAreaElement | null;
+  const successEl = document.getElementById('submitSuccessMessage');
+  const errorEl = document.getElementById('submitErrorMessage');
+
+  if (form && honeypot && nameEl && emailEl && messageEl) {
+    const fieldElements: Record<FieldKey, HTMLInputElement | HTMLTextAreaElement> = {
+      name: nameEl,
+      emailAddress: emailEl,
+      message: messageEl,
+    };
+
+    /**
+     * Show the invalid-feedback element keyed `data-sb-feedback="field:reason"`
+     * (hiding any sibling feedback for the same field) and mark the field
+     * invalid.
+     */
+    function showFeedback(fieldKey: FieldKey, reason: string): void {
+      const feedbacks = form!.querySelectorAll<HTMLElement>(
+        `[data-sb-feedback^="${fieldKey}:"]`,
+      );
+      feedbacks.forEach((el) => {
+        const matches = el.getAttribute('data-sb-feedback') === `${fieldKey}:${reason}`;
+        el.style.display = matches ? 'block' : '';
+      });
+      fieldElements[fieldKey].classList.add('is-invalid');
+    }
+
+    /** Hide every feedback element for a field and clear its invalid marker. */
+    function clearFeedback(fieldKey: FieldKey): void {
+      const feedbacks = form!.querySelectorAll<HTMLElement>(
+        `[data-sb-feedback^="${fieldKey}:"]`,
+      );
+      feedbacks.forEach((el) => {
+        el.style.display = '';
+      });
+      fieldElements[fieldKey].classList.remove('is-invalid');
+    }
+
+    function clearAllFeedback(): void {
+      (Object.keys(fieldElements) as FieldKey[]).forEach(clearFeedback);
+    }
+
+    function handleSubmit(event: SubmitEvent): void {
+      // Never let the browser perform a native submit — this form issues zero
+      // network requests.
+      event.preventDefault();
+
+      // Compute the outcome with the pure (tested) logic: honeypot is checked
+      // first, then the three field validators run only when it is empty.
+      const outcome = computeSubmitOutcome({
+        name: nameEl!.value,
+        emailAddress: emailEl!.value,
+        message: messageEl!.value,
+        honeypot: honeypot!.value,
+      });
+
+      if (outcome.status === 'silently-dropped') {
+        // Honeypot was filled. Keep the success container hidden and surface no
+        // distinguishing feedback, so a detected bot is indistinguishable from
+        // an idle form.
+        return;
+      }
+
+      if (outcome.status === 'blocked') {
+        // Show feedback for each failing field; entered values are untouched.
+        (Object.keys(fieldElements) as FieldKey[]).forEach((fieldKey) => {
+          const reason = outcome.errors[fieldKey];
+          if (reason) {
+            showFeedback(fieldKey, reason);
+          } else {
+            clearFeedback(fieldKey);
+          }
+        });
+        successEl?.classList.add('d-none');
+        return;
+      }
+
+      // Success: clear all feedback and reveal the (simulated) success message.
+      clearAllFeedback();
+      errorEl?.classList.add('d-none');
+      successEl?.classList.remove('d-none');
+    }
+
+    form.addEventListener('submit', handleSubmit);
+
+    // Per-field validators, used to re-check a single field on input.
+    const fieldValidators: Record<FieldKey, (value: string) => string | null> = {
+      name: validateName,
+      emailAddress: validateEmail,
+      message: validateMessage,
+    };
+
+    // On any field `input` event, re-check that single field and clear its
+    // feedback once it becomes valid (Requirements 1.5, 3.6).
+    (Object.keys(fieldElements) as FieldKey[]).forEach((fieldKey) => {
+      const element = fieldElements[fieldKey];
+      element.addEventListener('input', () => {
+        if (fieldValidators[fieldKey](element.value) === null) {
+          clearFeedback(fieldKey);
+        }
+      });
+    });
+  }
+</script>
